@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+      <div class="logo">Masakan</div>
+      <ul class="menu">
+          <li><a href="#welcome-section">Home</a></li>
+          <li><a href="#container">Menu</a></li>
+          <li><a href="#logout">Login</a></li>
+      </ul>
+  </nav>
+
+  <div class="welcome-section" class="welcome-section" id="welcome-section">
+      <div class="welcome-text">
+          <h1>Selamat Datang di Masakan</h1>
+          <h2>Masakan adalah website yang mencari berbagai macam resep yang diinginkan </h2>
+      </div>
+      <div class="welcome-image">
+          <img src="../image/makanan.png" alt="Gambar Makanan">
+      </div>
+  </div>
+
+  <div class="container" class="container" id="container">
+      <div class="search-container">
+          <input type="text" placeholder="Masukan Menu Yang Ingin Dicari...." id="user-inp" />
+          <button id="search-btn">Search</button>
+      </div>
+      <div id="result"></div>
+  </div>
+
+  <div class="logout" class="logout" id="logout">
+    <div class="login-header">
+        <header>Login</header>
+    </div>
+    <div class="input-box">
+        <input type="text" class="input-field" placeholder="Email" autocomplete="off" required>
+    </div>
+    <div class="input-box">
+        <input type="password" class="input-field" placeholder="Password" autocomplete="off" required>
+    </div>
+    <div class="forgot">
+        <section>
+            <input type="checkbox" id="check">
+            <label for="check">Remember me</label>
+        </section>
+        <section>
+            <a href="#">Forgot password</a>
+        </section>
+    </div>
+    <div class="input-submit">
+        <button class="submit-btn" id="submit"></button>
+        <label for="submit">Sign In</label>
+    </div>
+    <div class="sign-up-link">
+        <p>Don't have account? <a href="#">Sign Up</a></p>
+    </div>
+  </div>
+
+
+  <div class="footer">
+    <p>Copyrigt : Mas Roro | Idelia | Cornelia | ksm multimedia 2024</p>
+  </div>
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
