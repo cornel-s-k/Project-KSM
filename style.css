@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+/* Menghapus padding dan margin default dari semua elemen.
+   Mengatur box-sizing ke border-box agar padding dan border dimasukkan dalam ukuran elemen.
+   Mengatur font default untuk seluruh halaman ke "Poppins". */
 
 body {
   background-image: url('path_to_background_image.jpg'); /* Tambahkan path gambar background */
@@ -12,6 +15,9 @@ body {
   background-repeat: no-repeat;
   color: #fff;
 }
+/* Mengatur gambar latar belakang untuk body dengan ukuran penuh dan posisi di tengah.
+   Gambar tidak akan diulang.
+   Mengatur warna teks menjadi putih. */
 
 nav {
   width: 100%;
@@ -25,11 +31,15 @@ nav {
   top: 0;
   z-index: 1000;
 }
+/* Mengatur elemen nav agar memiliki lebar 100% dan latar belakang semi-transparan.
+   Warna teks putih, menggunakan flexbox untuk tata letak.
+   Memastikan nav berada di atas dengan z-index dan posisi tetap di atas halaman. */
 
 .logo {
   font-size: 24px;
   font-weight: bold;
 }
+/* Mengatur ukuran font dan ketebalan font untuk elemen dengan kelas logo. */
 
 .menu {
   list-style: none;
@@ -37,10 +47,13 @@ nav {
   padding: 0;
   display: flex;
 }
+/* Menghilangkan bullet points pada daftar dan mengatur margin serta padding menjadi nol.
+   Menggunakan flexbox untuk tata letak menu. */
 
 .menu li {
   margin-left: 20px;
 }
+/* Menambahkan margin kiri sebesar 20px pada setiap item daftar. */
 
 .menu li a {
   font-size: 16px;
@@ -48,10 +61,13 @@ nav {
   text-decoration: none;
   transition: 0.3s ease;
 }
+/* Mengatur ukuran font, warna teks, dan menghilangkan garis bawah pada link.
+   Menambahkan transisi untuk efek hover yang halus. */
 
 .menu li a:hover {
   color: #ccc;
 }
+/* Mengubah warna teks menjadi abu-abu saat link di-hover. */
 
 .welcome-section {
   display: flex;
@@ -63,24 +79,31 @@ nav {
   position: relative;
   z-index: 1;
 }
+/* Mengatur bagian sambutan agar berada di tengah halaman dengan menggunakan flexbox.
+   Mengatur tinggi penuh layar, teks di tengah, dan latar belakang semi-transparan. */
 
 .welcome-text {
   max-width: 50%;
 }
+/* Mengatur lebar maksimal untuk teks sambutan menjadi 50% dari kontainer. */
 
 .welcome-text h1 {
   font-size: 3em;
   margin-bottom: 20px;
 }
+/* Mengatur ukuran font dan margin bawah untuk heading di dalam teks sambutan. */
 
 .welcome-image {
   max-width: 50%;
 }
+/* Mengatur lebar maksimal untuk gambar sambutan menjadi 50% dari kontainer. */
 
 .welcome-image img {
   width: 100%;
   animation: float 3s ease-in-out infinite;
 }
+/* Mengatur gambar agar memiliki lebar penuh dari kontainer.
+   Menambahkan animasi mengapung dengan durasi 3 detik yang berulang selamanya. */
 
 @keyframes float {
   0%, 100% {
@@ -91,10 +114,57 @@ nav {
   }
 }
 
-.main-content {
+.welcome-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+  background-color: #f393c8;
+}
 
+.welcome-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.2s;
+  background: #ffffff;
+}
+
+.welcome-button:hover {
+  transform: scale(1.05);
+}
+
+.welcome-button img {
+  width: 150px; /* Increased size */
+  height: 150px; /* Increased size */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.welcome-button h3 {
+  font-size: 20px; /* Increased size */
+  margin-bottom: 5px;
+}
+
+.welcome-button p {
+  font-size: 16px; /* Increased size */
+  text-align: center;
+}
+
+
+
+/* Mendefinisikan animasi mengapung (float) yang menggerakkan elemen secara vertikal. */
+
+.main-content {
   padding: 2em 0;
 }
+/* Mengatur padding vertikal untuk elemen dengan kelas main-content. */
 
 .container {
   background-color: #ffffff;
@@ -107,6 +177,10 @@ nav {
   position: relative;
   z-index: 2;
 }
+/* Mengatur gaya untuk container dengan latar belakang putih dan font ukuran 16px.
+   Padding dalam kontainer, lebar 90% dari viewport, dan lebar maksimal 32em.
+   Mengatur margin otomatis untuk memusatkan kontainer.
+   Menambahkan border-radius dan posisi relatif dengan z-index 2. */
 
 .search-container {
   width: 100%;
@@ -114,6 +188,7 @@ nav {
   grid-template-columns: 9fr 3fr;
   gap: 1.2em;
 }
+/* Mengatur kotak pencarian menggunakan grid dengan dua kolom (9:3) dan jarak antar kolom 1.2em. */
 
 .search-container input {
   font-size: 1em;
@@ -122,6 +197,7 @@ nav {
   outline: none;
   border-bottom: 2px solid #202030;
 }
+/* Mengatur input dalam kotak pencarian dengan ukuran font, padding, tanpa border, dan garis bawah. */
 
 .search-container button {
   font-size: 1em;
@@ -130,12 +206,14 @@ nav {
   font-weight: 600;
   border-radius: 0.3em;
 }
+/* Mengatur tombol dalam kotak pencarian dengan ukuran font, warna latar belakang, tanpa border, ketebalan font, dan border-radius. */
 
 img {
   display: block;
   width: 50%;
   margin: 1.8em auto 0 auto;
 }
+/* Mengatur semua gambar dengan display block, lebar 50%, dan margin otomatis di atas dan tengah. */
 
 .details {
   background-color: #f371bb;
@@ -144,16 +222,19 @@ img {
   text-align: center;
   padding: 0.6em 0;
 }
+/* Mengatur bagian details dengan latar belakang berwarna pink terang, posisi relatif, margin negatif di atas, teks di tengah, dan padding vertikal. */
 
 .details h2 {
   font-size: 1.2em;
   font-weight: 600;
 }
+/* Mengatur ukuran font dan ketebalan untuk heading dalam bagian details. */
 
 .details h4 {
   font-size: 1em;
   font-weight: 400;
 }
+/* Mengatur ukuran font dan ketebalan untuk sub-heading dalam bagian details. */
 
 #show-recipe {
   font-size: 1em;
@@ -166,6 +247,7 @@ img {
   border-radius: 0.3em;
   font-weight: 600;
 }
+/* Mengatur tombol "show-recipe" dengan ukuran font, posisi relatif, jarak dari kiri 75%, padding, warna latar belakang, tanpa border, jarak dari atas, border-radius, dan ketebalan font. */
 
 #recipe {
   position: absolute;
@@ -178,6 +260,7 @@ img {
   border-radius: 0.6em;
   display: none;
 }
+/* Mengatur bagian recipe dengan posisi absolut, latar belakang putih, tinggi minimal 100%, lebar penuh, posisi dari atas dan kiri, z-index, border-radius, dan display none (tidak terlihat). */
 
 #recipe pre {
   white-space: pre-wrap;
@@ -186,6 +269,7 @@ img {
   font-size: 0.92em;
   color: #303040;
 }
+/* Mengatur elemen pre dalam bagian recipe dengan white-space pre-wrap, word-wrap break-word, padding, ukuran font, dan warna teks. */
 
 #hide-recipe {
   font-size: 1em;
@@ -198,6 +282,7 @@ img {
   left: 90%;
   border-radius: 0.3em;
 }
+/* Mengatur tombol "hide-recipe" dengan ukuran font, posisi relatif, lebar dan tinggi 1.8em, warna latar belakang, tanpa border, posisi dari atas, posisi dari kiri, dan border-radius. */
 
 ul {
   font-size: 1em;
@@ -209,82 +294,124 @@ ul {
   color: #303040;
   text-transform: capitalize;
 }
+/* Mengatur semua elemen ul dengan ukuran font, posisi relatif, display grid, dua kolom otomatis, jarak antar kolom dan baris, padding, warna teks, dan transformasi teks menjadi kapital. */
 
 h3 {
   text-align: center;
   margin-top: 1.8em;
   color: #202030;
 }
+/* Mengatur elemen h3 dengan teks di tengah, margin atas, dan warna teks. */
 
 @media screen and (max-width: 500px) {
   .container {
     font-size: 14px;
   }
 }
+/* Media query untuk mengatur ukuran font dalam container untuk layar dengan lebar maksimal 500px. */
 
-.logout{
-  display:flex;
+.logout-wrapper {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* Mengatur wrapper logout dengan display flex, teks di tengah, dan tinggi penuh layar. */
+
+.logout {
+  text-align: center;
   flex-direction: column;
   width: 440px;
   height: 480px;
   padding: 30px;
+  background-color: #f371bb;
+  border-radius: 10px;
 }
-.login-header{
+/* Mengatur gaya untuk kotak logout dengan teks di tengah, arah flex kolom, lebar dan tinggi, padding, warna latar belakang, dan border-radius. */
+
+.login-header {
   text-align: center;
   margin: 20px 0 40px 0;
 }
-.login-header header{
-  color: rgb(255, 0, 200);
-  font-size: 30px;;
+/* Mengatur teks di dalam elemen dengan kelas .login-header agar berada di tengah.
+   Menambahkan margin atas sebesar 20px dan margin bawah sebesar 40px. */
+
+.login-header header {
+  color: rgb(241, 241, 241);
+  font-size: 30px;
   font-weight: 600;
 }
-.input-box .input-field{
+/* Mengatur warna teks, ukuran font, dan ketebalan font untuk elemen header di dalam .login-header. */
+
+.input-box .input-field {
   width: 100%;
-  height:60px;
+  height: 60px;
   font-size: 17px;
   padding: 0 25px;
   margin-bottom: 15px;
   border-radius: 30px;
   border: none;
-  box-shadow: 0px 5px 10px 1px rgba(0,0,0, 0.05);
+  box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.05);
   outline: none;
   transition: .3s;
 }
-::placeholder{
+/* Mengatur lebar, tinggi, ukuran font, padding, margin bawah, border-radius, dan box-shadow untuk input field dalam .input-box.
+   Menghilangkan border dan outline, serta menambahkan transisi selama 0.3 detik. */
+
+::placeholder {
   font-weight: 500;
   color: #222;
 }
-.input-field:focus{
+/* Mengatur ketebalan font dan warna teks placeholder pada input field. */
+
+.input-field:focus {
   width: 105%;
 }
-.forgot{
+/* Mengatur lebar input field menjadi 105% saat difokuskan (focus). */
+
+.forgot {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
 }
-section{
+/* Mengatur elemen dengan kelas .forgot menggunakan flexbox dan mengatur jarak antara item dengan justify-content: space-between.
+   Menambahkan margin bawah sebesar 40px. */
+
+section {
   display: flex;
   align-items: center;
   font-size: 14px;
-  color:#555;
-}
-#check{
-  margin-right: 10px;
-}
-a{
-  text-decoration: none;
-}
-a:hover{
-  text-decoration: underline;
-}
-section a{
   color: #555;
 }
-.input-submit{
+/* Mengatur elemen section menggunakan flexbox dengan item sejajar di tengah.
+   Mengatur ukuran font dan warna teks. */
+
+#check {
+  margin-right: 10px;
+}
+/* Menambahkan margin kanan sebesar 10px untuk elemen dengan id #check. */
+
+a {
+  text-decoration: none;
+}
+/* Menghilangkan garis bawah pada link. */
+
+a:hover {
+  text-decoration: underline;
+}
+/* Menambahkan garis bawah pada link saat di-hover. */
+
+section a {
+  color: #555;
+}
+/* Mengatur warna teks untuk link di dalam elemen section. */
+
+.input-submit {
   position: relative;
 }
-.submit-btn{
+/* Mengatur elemen dengan kelas .input-submit dengan posisi relatif. */
+
+.submit-btn {
   width: 100%;
   height: 60px;
   background: #222;
@@ -293,28 +420,42 @@ section a{
   cursor: pointer;
   transition: .3s;
 }
-.input-submit label{
+/* Mengatur lebar, tinggi, warna latar belakang, tanpa border, border-radius, dan cursor pointer untuk tombol submit.
+   Menambahkan transisi selama 0.3 detik. */
+
+.input-submit label {
   position: absolute;
   top: 45%;
   left: 50%;
   color: #fff;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   cursor: pointer;
 }
-.submit-btn:hover{
-  background: #000;
-  transform: scale(1.05,1);
+/* Mengatur posisi label dalam elemen .input-submit menjadi absolut.
+   Mengatur posisi dari atas 45% dan dari kiri 50%.
+   Menambahkan transformasi untuk menggeser elemen ke tengah.
+   Mengatur warna teks dan cursor pointer. */
+
+.submit-btn:hover {
+  background: #f4f4f4;
+  transform: scale(1.05, 1);
 }
-.sign-up-link{
+/* Mengubah warna latar belakang tombol submit dan menambahkan transformasi skala saat di-hover. */
+
+.sign-up-link {
   text-align: center;
   font-size: 15px;
   margin-top: 20px;
 }
-.sign-up-link a{
+/* Mengatur teks di dalam elemen dengan kelas .sign-up-link agar berada di tengah.
+   Mengatur ukuran font dan menambahkan margin atas sebesar 20px. */
+
+.sign-up-link a {
   color: #000;
   font-weight: 600;
 }
+/* Mengatur warna teks dan ketebalan font untuk link di dalam .sign-up-link. */
+
 .footer {
   align-items: center;
   background-color: #f371bb;
@@ -325,3 +466,6 @@ section a{
   margin: 50px auto 0px;
   text-align: center;
 }
+/* Mengatur elemen dengan kelas .footer agar item berada di tengah secara vertikal.
+   Mengatur warna latar belakang, lebar, tinggi, warna teks, padding, dan margin atas otomatis dengan jarak 50px.
+   Menambahkan teks di tengah. */
