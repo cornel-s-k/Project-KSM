@@ -5,71 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe App</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-      <div class="logo">Masakan</div>
-      <ul class="menu">
-          <li><a href="#welcome-section">Home</a></li>
-          <li><a href="#container">Menu</a></li>
-          <li><a href="#logout">Login</a></li>
-      </ul>
-  </nav>
+    <nav>
+        <div class="logo">Masakan</div>
+        <ul class="menu">
+            <li><a href="#welcome-section">Home</a></li>
+            <li><a href="#welcome-buttons">Menu</a></li>
+            <li><a href="#container">Search</a></li>
+        </ul>
+    </nav>
 
-  <div class="welcome-section" class="welcome-section" id="welcome-section">
-      <div class="welcome-text">
-          <h1>Selamat Datang di Masakan</h1>
-          <h2>Masakan adalah website yang mencari berbagai macam resep yang diinginkan </h2>
-      </div>
-      <div class="welcome-image">
-          <img src="../image/makanan.png" alt="Gambar Makanan">
-      </div>
-  </div>
+    <div class="welcome-section" id="welcome-section">
+        <div class="welcome-text">
+            <h1>Selamat Datang di Masakan</h1>
+            <h2>Masakan adalah website yang mencari berbagai macam resep yang diinginkan</h2>
+        </div>
+        <div class="welcome-image">
+            <img src="../image/makanan.png" alt="Gambar Makanan">
+        </div>
+    </div>
 
-  <div class="container" class="container" id="container">
-      <div class="search-container">
-          <input type="text" placeholder="Masukan Menu Yang Ingin Dicari...." id="user-inp" />
-          <button id="search-btn">Search</button>
-      </div>
-      <div id="result"></div>
-  </div>
+    <div class="welcome-buttons" id="welcome-buttons">
+        <button class="welcome-button">
+            <img src="../image/Ayam geprek.jpeg" alt="Dish 1">
+            <h3>Ayam Geprek</h3>
+            <p>is a popular Indonesian dish consisting of fried chicken that is then crushed and served with a spicy sauce.</p>
+        </button>
+        <button class="welcome-button">
+            <img src="../image/Nasi Goreng (Indonesian Fried Rice) - Sugar Spice & More.jpeg" alt="Dish 2">
+            <h3>Nasi Goreng</h3>
+            <p>is a popular Indonesian dish consisting of fried rice</p>
+        </button>
+        <button class="welcome-button">
+            <img src="../image/95 Restaurants Where You Can Eat For Free (Or Get A Freebie) On Your Birthday.jpeg" alt="Dish 3">
+            <h3>Burger</h3>
+            <p>refers to a type of sandwich consisting of a flat, round patty of ground meat </p>
+        </button>
+        <button class="welcome-button">
+            <img src="../image/korean braised pork ribs - glebe kitchen.jpeg" alt="Dish 4">
+            <h3>Korean Pork</h3>
+            <p> refers to pork that is prepared and consumed in Korean cuisine. </p>
+        </button>
+        <button class="welcome-button">
+            <img src="../image/Cheese Pizza Recipe_ How to Make Cheese Pizza Recipe at Home _ Homemade Cheese Pizza Recipe - Times Food.jpeg" alt="Dish 5">
+            <h3>Cheese Pizza</h3>
+            <p>refers to a type of pizza that is topped with cheese, typically mozzarella, as the primary ingredient.</p>
+        </button>
+    </div>
 
-  <div class="logout" class="logout" id="logout">
-    <div class="login-header">
-        <header>Login</header>
+    <div class="container" id="container">
+        <div class="search-container">
+            <input type="text" placeholder="Masukan Menu Yang Ingin Dicari..." id="user-inp" />
+            <button id="search-btn">Search</button>
+        </div>
+        <div id="result"></div>
     </div>
-    <div class="input-box">
-        <input type="text" class="input-field" placeholder="Email" autocomplete="off" required>
-    </div>
-    <div class="input-box">
-        <input type="password" class="input-field" placeholder="Password" autocomplete="off" required>
-    </div>
-    <div class="forgot">
-        <section>
-            <input type="checkbox" id="check">
-            <label for="check">Remember me</label>
-        </section>
-        <section>
-            <a href="#">Forgot password</a>
-        </section>
-    </div>
-    <div class="input-submit">
-        <button class="submit-btn" id="submit"></button>
-        <label for="submit">Sign In</label>
-    </div>
-    <div class="sign-up-link">
-        <p>Don't have account? <a href="#">Sign Up</a></p>
-    </div>
-  </div>
 
+    <div class="footer">
+        <p>&copy; 2024 Mas Roro | Idelia | Cornelia | KSM Multimedia</p>
+    </div>
 
-  <div class="footer">
-    <p>Copyrigt : Mas Roro | Idelia | Cornelia | ksm multimedia 2024</p>
-  </div>
-  <!-- Script -->
-  <script src="script.js"></script>
+    <!-- Script -->
+    <script src="script.js"></script>
 </body>
 </html>
